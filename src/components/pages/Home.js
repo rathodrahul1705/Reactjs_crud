@@ -15,7 +15,7 @@ import {Link} from "react-router-dom";
 
 			const result = await axios.get("http://localhost:3001/users");
 			setUser(result.data.reverse());
-			console.log(result.data);
+			// console.log(result.data);
 		}	
 
 
@@ -31,20 +31,20 @@ import {Link} from "react-router-dom";
 	 <div className="container">
 	 <div className="py-4">
       <h1>Home Page</h1>
-
+      <hr/>
 
        <table className="table table-bordered">
     <thead>
-      <tr>
+      <tr className="text-center">
 
-        <th scope="col">#</th>
+        <th scope="col">Sr.No.</th>
         <th scope="col">Firstname</th>
         <th scope="col">Username</th>
         <th scope="col">Email</th>
         <th scope = "col">Action</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody className="text-center">
 
 	{users.map((user,index) =>(
 		<tr>
